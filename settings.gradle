@@ -1,1 +1,1 @@
-include ':weibo-android-sdk'
+include ':weibo-android-sdk-core'
