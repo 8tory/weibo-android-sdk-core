@@ -27,6 +27,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
+    //compile 'com.android.support:support-v4:22.0.0' // needed? find -name '*.class' -exec javap {} \; | grep support.v4 # not found
 }
 
 apply from: file('deploy.gradle')
