@@ -1,4 +1,8 @@
-# weibo-android-sdk
+# weibo-android-sdk-core
+
+[![Build Status](https://travis-ci.org/8tory/weibo-android-sdk-core.svg)](https://travis-ci.org/8tory/weibo-android-sdk-core)
+
+Import from https://github.com/sinaweibosdk/weibo_android_sdk/releases
 
 ## Installation
 
@@ -15,6 +19,8 @@ dependencies {
 ```
 
 ## See Also
+
+* https://github.com/8tory/weibo-android-sdk
 
 md5sum:
 
