@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/8tory/weibo-android-sdk-core.svg)](https://travis-ci.org/8tory/weibo-android-sdk-core)
 
+![](art/weibo-android-sdk-core.png)
+
+Used to integrate Android apps with Weibo Platform.
+
 Import from https://github.com/sinaweibosdk/weibo_android_sdk/releases
 
 ## Installation
