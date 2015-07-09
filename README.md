@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.8tory:weibo-android-sdk-core:-SNAPSHOT'
+  compile 'com.infstory:weibo-android-sdk-core:3.1.1'
 }
 ```
 
