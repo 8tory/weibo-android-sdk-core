@@ -6,6 +6,22 @@ Import from https://github.com/sinaweibosdk/weibo_android_sdk/releases
 
 ## Installation
 
+via bintray:
+
+```gradle
+repositories {
+    maven {
+        url "https://dl.bintray.com/8tory/maven/"
+    }
+}
+
+dependencies {
+  compile 'com.github.8tory:weibo-android-sdk-core:-SNAPSHOT'
+}
+```
+
+or, via jitpack:
+
 ```gradle
 repositories {
     maven {
