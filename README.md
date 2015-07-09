@@ -15,7 +15,7 @@ via bintray:
 ```gradle
 repositories {
     maven {
-        url "https://dl.bintray.com/8tory/maven/"
+        url "https://dl.bintray.com/8tory/maven"
     }
 }
 
