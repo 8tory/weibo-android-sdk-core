@@ -10,13 +10,11 @@ Import from https://github.com/sinaweibosdk/weibo_android_sdk/releases
 
 ## Installation
 
-via bintray:
+via jcenter:
 
 ```gradle
 repositories {
-    maven {
-        url "https://dl.bintray.com/8tory/maven"
-    }
+    jcenter()
 }
 
 dependencies {
