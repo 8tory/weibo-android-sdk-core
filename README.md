@@ -1,5 +1,7 @@
 # weibo-android-sdk-core
 
+[![Download](https://api.bintray.com/packages/8tory/maven/weibo-android-sdk-core/images/download.svg) ](https://bintray.com/8tory/maven/weibo-android-sdk-core/_latestVersion)
+![JitPack](https://img.shields.io/github/tag/8tory/weibo-android-sdk-core.svg?label=JitPack)
 [![Build Status](https://travis-ci.org/8tory/weibo-android-sdk-core.svg)](https://travis-ci.org/8tory/weibo-android-sdk-core)
 
 ![](art/weibo-android-sdk-core.png)
