@@ -18,7 +18,7 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 def isReleaseBuild() {
-    return VERSION_NAME.contains("SNAPSHOT") == false
+    return getVersionName().contains("SNAPSHOT") == false
 }
 
 def getReleaseRepositoryUrl() {
@@ -39,15 +39,23 @@ def getRepositoryPassword() {
     return hasProperty('BINTRAY_KEY') ? BINTRAY_KEY : ""
 }
 
+def getGroupId() {
+    return group.equals(POM_ARTIFACT_ID) ? GROUP : group
+}
+
+def getVersionName() {
+    return version.equals("unspecified") ? VERSION_NAME : version
+}
+
 afterEvaluate { project ->
     uploadArchives {
         repositories {
             mavenDeployer {
                 beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-                pom.groupId = GROUP
+                pom.groupId = getGroupId()
                 pom.artifactId = POM_ARTIFACT_ID
-                pom.version = VERSION_NAME
+                pom.version = getVersionName()
 
                 repository(url: getReleaseRepositoryUrl()) {
                     authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
