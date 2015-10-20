@@ -1,0 +1,70 @@
+diff -U 0 -N weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.component.GameManager weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.component.GameManager
+--- weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.component.GameManager	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.component.GameManager	2015-10-20 11:02:07.000000000 +0800
+@@ -0,0 +1,12 @@
++public class com.sina.weibo.sdk.component.GameManager {
++  public static final java.lang.String DEFAULT_CHARSET;
++  public com.sina.weibo.sdk.component.GameManager();
++  public static java.lang.String AddOrUpdateGameAchievement(android.content.Context, com.sina.weibo.sdk.net.WeiboParameters);
++  public static java.lang.String addOrUpdateGameAchievementRelation(android.content.Context, com.sina.weibo.sdk.net.WeiboParameters);
++  public static java.lang.String addOrUpdateAchievementScore(android.content.Context, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
++  public static java.lang.String readPlayerScoreInfo(android.content.Context, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
++  public static java.lang.String readPlayerFriendsScoreInfo(android.content.Context, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
++  public static java.lang.String readPlayerAchievementGain(android.content.Context, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
++  public void invatationWeiboFriendsByList(android.content.Context, java.lang.String, java.lang.String, java.lang.String, com.sina.weibo.sdk.auth.WeiboAuthListener);
++  public void invatationWeiboFriendsInOnePage(android.content.Context, java.lang.String, java.lang.String, java.lang.String, com.sina.weibo.sdk.auth.WeiboAuthListener, java.util.ArrayList<java.lang.String>);
++}
+diff -U 0 -N weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.component.GameRequestParam weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.component.GameRequestParam
+--- weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.component.GameRequestParam	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.component.GameRequestParam	2015-10-20 11:02:07.000000000 +0800
+@@ -0,0 +1,12 @@
++public class com.sina.weibo.sdk.component.GameRequestParam extends com.sina.weibo.sdk.component.BrowserRequestParamBase {
++  public com.sina.weibo.sdk.component.GameRequestParam(android.content.Context);
++  public void onCreateRequestParamBundle(android.os.Bundle);
++  public java.lang.String getToken();
++  public void setToken(java.lang.String);
++  public java.lang.String getAppKey();
++  public void setAppKey(java.lang.String);
++  public com.sina.weibo.sdk.auth.WeiboAuthListener getAuthListener();
++  public java.lang.String getAuthListenerKey();
++  public void setAuthListener(com.sina.weibo.sdk.auth.WeiboAuthListener);
++  public void execRequest(android.app.Activity, int);
++}
+diff -U 0 -N weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.component.GameRequestParam$WidgetRequestCallback weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.component.GameRequestParam$WidgetRequestCallback
+--- weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.component.GameRequestParam$WidgetRequestCallback	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.component.GameRequestParam$WidgetRequestCallback	2015-10-20 11:02:07.000000000 +0800
+@@ -0,0 +1,3 @@
++public interface com.sina.weibo.sdk.component.GameRequestParam$WidgetRequestCallback {
++  public abstract void onWebViewResult(java.lang.String);
++}
+diff -U 0 -N weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.constant.WBConstants weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.constant.WBConstants
+--- weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.constant.WBConstants	2015-10-20 11:01:42.000000000 +0800
++++ weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.constant.WBConstants	2015-10-20 11:02:07.000000000 +0800
+@@ -20,0 +21,11 @@
++  public static final java.lang.String GAME_PARAMS_SOURCE;
++  public static final java.lang.String GAME_PARAMS_ACHIEVEMENT_ID;
++  public static final java.lang.String GAME_PARAMS_GAME_ID;
++  public static final java.lang.String GAME_PARAMS_UID;
++  public static final java.lang.String GAME_PARAMS_SCORE;
++  public static final java.lang.String GAME_PARAMS_DESCRIPTION;
++  public static final java.lang.String GAME_PARAMS_GAME_POINT;
++  public static final java.lang.String GAME_PARAMS_GAME_IMAGE_URL;
++  public static final java.lang.String GAME_PARAMS_GAME_ACHIEVEMENT_TYPE_URL;
++  public static final java.lang.String GAME_PARAMS_GAME_ACHIEVEMENT_TITLE;
++  public static final java.lang.String GAME_PARAMS_GAME_CREATE_TIME;
+diff -U 0 -N weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.net.HttpManager weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.net.HttpManager
+--- weibo-android-sdk-core-3.1.1/com.sina.weibo.sdk.net.HttpManager	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.net.HttpManager	2015-10-20 11:02:07.000000000 +0800
+@@ -0,0 +1,12 @@
++public class com.sina.weibo.sdk.net.HttpManager {
++  public com.sina.weibo.sdk.net.HttpManager();
++  public static java.lang.String openUrl(android.content.Context, java.lang.String, java.lang.String, com.sina.weibo.sdk.net.WeiboParameters) throws com.sina.weibo.sdk.exception.WeiboException;
++  public static void shutdownHttpClient(org.apache.http.client.HttpClient);
++  public static java.lang.String openUrl4RdirectURL(android.content.Context, java.lang.String, java.lang.String, com.sina.weibo.sdk.net.WeiboParameters) throws com.sina.weibo.sdk.exception.WeiboException;
++  public static java.lang.String openRedirectUrl4LocationUri(android.content.Context, java.lang.String, java.lang.String, com.sina.weibo.sdk.net.WeiboParameters);
++  public static synchronized java.lang.String downloadFile(android.content.Context, java.lang.String, java.lang.String, java.lang.String) throws com.sina.weibo.sdk.exception.WeiboException;
++  public static org.apache.http.client.HttpClient getNewHttpClient();
++  public static void buildParams(java.io.OutputStream, com.sina.weibo.sdk.net.WeiboParameters) throws com.sina.weibo.sdk.exception.WeiboException;
++  public static java.lang.String readRsponse(org.apache.http.HttpResponse) throws com.sina.weibo.sdk.exception.WeiboException;
++  public static java.lang.String getBoundry();
++}
