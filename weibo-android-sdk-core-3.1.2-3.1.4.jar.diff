@@ -1,0 +1,101 @@
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.api.pay.WeiboPayImpl weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.api.pay.WeiboPayImpl
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.api.pay.WeiboPayImpl	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.api.pay.WeiboPayImpl	2016-04-29 03:19:26.000000000 +0800
+@@ -0,0 +1,9 @@
++public class com.sina.weibo.sdk.api.pay.WeiboPayImpl {
++  public com.sina.weibo.sdk.api.pay.WeiboPayImpl(android.content.Context, java.lang.String, boolean);
++  public boolean launchWeiboPay(android.app.Activity, java.lang.String);
++  public int getWeiboAppSupportAPI();
++  public boolean isWeiboAppInstalled();
++  public boolean isWeiboAppSupportAPI();
++  public boolean isSupportWeiboPay();
++  public void registerWeiboDownloadListener(com.sina.weibo.sdk.api.share.IWeiboDownloadListener);
++}
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.api.share.IWeiboShareAPI weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.api.share.IWeiboShareAPI
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.api.share.IWeiboShareAPI	2016-04-29 02:29:43.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.api.share.IWeiboShareAPI	2016-04-29 03:19:26.000000000 +0800
+@@ -13,0 +14,2 @@
++  public abstract boolean launchWeiboPayLogin(android.app.Activity, java.lang.String);
++  public abstract void shareMessageToWeiyou(android.content.Context, android.os.Bundle);
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.auth.sso.SsoHandler weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.auth.sso.SsoHandler
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.auth.sso.SsoHandler	2016-04-29 02:29:43.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.auth.sso.SsoHandler	2016-04-29 03:19:26.000000000 +0800
+@@ -11,0 +12 @@
++  public void addEventLog(android.content.Context, java.lang.String, java.lang.String);
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.auth.WeiboParameters weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.auth.WeiboParameters
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.auth.WeiboParameters	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.auth.WeiboParameters	2016-04-29 03:19:26.000000000 +0800
+@@ -0,0 +1,14 @@
++public class com.sina.weibo.sdk.auth.WeiboParameters {
++  public com.sina.weibo.sdk.auth.WeiboParameters();
++  public void add(java.lang.String, java.lang.String);
++  public void add(java.lang.String, int);
++  public void add(java.lang.String, long);
++  public void remove(java.lang.String);
++  public void remove(int);
++  public java.lang.String getKey(int);
++  public java.lang.String getValue(java.lang.String);
++  public java.lang.String getValue(int);
++  public int size();
++  public void addAll(com.sina.weibo.sdk.auth.WeiboParameters);
++  public void clear();
++}
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.constant.WBConstants weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.constant.WBConstants
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.constant.WBConstants	2016-04-29 02:29:43.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.constant.WBConstants	2016-04-29 03:19:26.000000000 +0800
+@@ -51,0 +52,16 @@
++  public static final java.lang.String SDK_WEOYOU_SHARETITLE;
++  public static final java.lang.String SDK_WEOYOU_SHAREDESC;
++  public static final java.lang.String SDK_WEOYOU_SHAREIMAGE;
++  public static final java.lang.String SDK_WEOYOU_SHAREURL;
++  public static final java.lang.String SDK_WEOYOU_SHARECARDID;
++  public static final java.lang.String SDK_REDIRECT_URL;
++  public static final java.lang.String SDK_REAL_ACTION;
++  public static final java.lang.String SDK_IS_SCHEME;
++  public static final java.lang.String SDK_REQUESTCODE;
++  public static final java.lang.String SDK_DELIVER_ACTION;
++  public static final int SDK_NEW_PAY_VERSION;
++  public static final java.lang.String ACTION_START_TIME;
++  public static final java.lang.String ACTION_LOG_TYPE_SSO;
++  public static final java.lang.String ACTION_LOG_TYPE_SHARE;
++  public static final java.lang.String ACTION_LOG_TYPE_MESSAGE;
++  public static final java.lang.String ACTION_LOG_TYPE_PAY;
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.constant.WBPageConstants$Scheme weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.constant.WBPageConstants$Scheme
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.constant.WBPageConstants$Scheme	2016-04-29 02:29:43.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.constant.WBPageConstants$Scheme	2016-04-29 03:19:26.000000000 +0800
+@@ -16,0 +17,2 @@
++  public static final java.lang.String SHARETOWEIYOU;
++  public static final java.lang.String SDK_DELIVER_SCHEME;
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.statistic.WBAgent weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.statistic.WBAgent
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.statistic.WBAgent	1970-01-01 08:00:00.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.statistic.WBAgent	2016-04-29 03:19:26.000000000 +0800
+@@ -0,0 +1,21 @@
++public class com.sina.weibo.sdk.statistic.WBAgent {
++  public static final java.lang.String TAG;
++  public com.sina.weibo.sdk.statistic.WBAgent();
++  public static void openActivityDurationTrack(boolean);
++  public static void setSessionContinueMillis(long);
++  public static void setAppKey(java.lang.String);
++  public static void setChannel(java.lang.String);
++  public static void setUploadInterval(long) throws java.lang.Exception;
++  public static void setForceUploadInterval(long);
++  public static void setNeedGzip(boolean);
++  public static void onPageStart(java.lang.String);
++  public static void onPageEnd(java.lang.String);
++  public static void onResume(android.content.Context);
++  public static void onPause(android.content.Context);
++  public static void onEvent(java.lang.Object, java.lang.String);
++  public static void onEvent(java.lang.Object, java.lang.String, java.util.Map<java.lang.String, java.lang.String>);
++  public static void uploadAppLogs(android.content.Context);
++  public static void onStop(android.content.Context);
++  public static void onKillProcess();
++  public static void setDebugMode(boolean, boolean);
++}
+diff -U 0 -N weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.utils.Utility weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.utils.Utility
+--- weibo-android-sdk-core-3.1.2/com.sina.weibo.sdk.utils.Utility	2016-04-29 02:29:43.000000000 +0800
++++ weibo-android-sdk-core-3.1.4/com.sina.weibo.sdk.utils.Utility	2016-04-29 03:19:26.000000000 +0800
+@@ -11,0 +12,4 @@
++  public static java.lang.String generateUAAid(android.content.Context);
++  public static void shareMessagetoWeibo(android.content.Context, java.lang.String, android.os.Bundle);
++  public static void openWeiboActivity(android.content.Context, java.lang.String, android.os.Bundle);
++  public static java.lang.Boolean isWeiBoVersionSupportNewPay(android.content.Context);

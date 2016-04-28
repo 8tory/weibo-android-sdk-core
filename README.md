@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.infstory:weibo-android-sdk-core:3.1.2'
+  compile 'com.infstory:weibo-android-sdk-core:3.1.4'
 }
 ```
 
@@ -74,6 +74,7 @@ BINTRAY_KEY=XXX
 jar md5sum:
 
 ```
+83c1c2e4664ded72ee9bee191251e8f7  weibo-android-sdk-core/libs/weibo-android-sdk-core-3.1.4.jar
 67e5d04955b6cb00b4edec31e3b85276  weiboSDKCore_3.1.2.jar (90483510, non-github-release-3.1.2)
 dd7eae7d2308aa503f48b358da40e69e  ./weibo_android_sdk-3.1.1/weibosdkcore_v3.1.1.jar
 a8ecaf0e017737cdc4898077b98d2be2  ./weibo_android_sdk-3.0.1/weibosdkcore_v3.0.1.jar
@@ -101,6 +102,45 @@ c44e7b9f55b889bde5cdb66437e3ea14  ./libs/mips64/libweibosdkcore.so
 bda1b819f07ba096ad1fb087208d9717  ./demo-src/WeiboSDKDemo/libs/x86/libweibosdkcore.so
 c44e7b9f55b889bde5cdb66437e3ea14  ./demo-src/WeiboSDKDemo/libs/mips64/libweibosdkcore.so
 9a8a2e8b46024c671da423fb35a33ee2  ./demo-src/WeiboSDKDemo/libs/mips/libweibosdkcore.so
+```
+
+jar md5sum, v3.1.4:
+
+```
+ed257a47cae11af1a55614055b879947  ./demo-src/WeiboSDK/libs/android-support-v4.jar
+e7109d64787e8ad0b96ac21eb1d4bdca  ./demo-src/WeiboSDK/libs/weibosdkcore_release.jar
+ed257a47cae11af1a55614055b879947  ./demo-src/WeiboSDKDemo/libs/android-support-v4.jar
+83c1c2e4664ded72ee9bee191251e8f7  ./weiboSDKCore_3.1.4.jar (imported, jardiff no changes)
+```
+
+so md5sum, v3.1.4:
+
+```
+410afb07a5b1347a711f787ece311c48  ./demo-src/WeiboSDKDemo/assets/libweibosdkcore.so
+
+8898e96b6e190db350073b33c54d8fd3  ./demo-src/WeiboSDKDemo/libs/arm64-v8a/libweibosdkcore.so
+f0855d78f92ed0bbd3a72f1e04fb60c1  ./demo-src/WeiboSDKDemo/libs/armeabi-v7a/libweibosdkcore.so
+3aa55cd19424e28d2a51398e743cf6c8  ./demo-src/WeiboSDKDemo/libs/armeabi/libweibosdkcore.so
+ab2d6eba99ef9c30af2d7d16954fabd0  ./demo-src/WeiboSDKDemo/libs/mips/libweibosdkcore.so
+26298b5519043ab295d80bcf52c2f4e2  ./demo-src/WeiboSDKDemo/libs/mips64/libweibosdkcore.so
+aa841e38bdb4b7009db43b48127ce9f0  ./demo-src/WeiboSDKDemo/libs/x86/libweibosdkcore.so
+a761456bca3d188cd02c53c9ddc7310e  ./demo-src/WeiboSDKDemo/libs/x86_64/libweibosdkcore.so
+
+8898e96b6e190db350073b33c54d8fd3  ./libs/arm64-v8a/libweibosdkcore.so
+f0855d78f92ed0bbd3a72f1e04fb60c1  ./libs/armeabi-v7a/libweibosdkcore.so
+3aa55cd19424e28d2a51398e743cf6c8  ./libs/armeabi/libweibosdkcore.so
+ab2d6eba99ef9c30af2d7d16954fabd0  ./libs/mips/libweibosdkcore.so
+26298b5519043ab295d80bcf52c2f4e2  ./libs/mips64/libweibosdkcore.so
+aa841e38bdb4b7009db43b48127ce9f0  ./libs/x86/libweibosdkcore.so
+a761456bca3d188cd02c53c9ddc7310e  ./libs/x86_64/libweibosdkcore.so
+
+8898e96b6e190db350073b33c54d8fd3  ./weibo-android-sdk-core/src/main/jniLibs/arm64-v8a/libweibosdkcore.so
+3aa55cd19424e28d2a51398e743cf6c8  ./weibo-android-sdk-core/src/main/jniLibs/armeabi/libweibosdkcore.so
+f0855d78f92ed0bbd3a72f1e04fb60c1  ./weibo-android-sdk-core/src/main/jniLibs/armeabi-v7a/libweibosdkcore.so
+26298b5519043ab295d80bcf52c2f4e2  ./weibo-android-sdk-core/src/main/jniLibs/mips64/libweibosdkcore.so
+ab2d6eba99ef9c30af2d7d16954fabd0  ./weibo-android-sdk-core/src/main/jniLibs/mips/libweibosdkcore.so
+a761456bca3d188cd02c53c9ddc7310e  ./weibo-android-sdk-core/src/main/jniLibs/x86_64/libweibosdkcore.so
+aa841e38bdb4b7009db43b48127ce9f0  ./weibo-android-sdk-core/src/main/jniLibs/x86/libweibosdkcore.so
 ```
 
 ## License

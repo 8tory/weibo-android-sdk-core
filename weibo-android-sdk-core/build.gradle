@@ -46,7 +46,7 @@ publish {
     userOrg = '8tory'
     groupId = 'com.infstory'
     artifactId = 'weibo-android-sdk-core'
-    publishVersion = '3.1.2'
+    publishVersion = '3.1.4'
     desc = 'Weibo Android SDK Core'
     website = 'https://github.com/8tory/weibo-android-sdk-core'
     bintrayUser = getRepositoryUsername()
